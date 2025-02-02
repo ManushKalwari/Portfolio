@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: #e6e6e6;
+  --secondary-color: #383819;
+  --text-color: #7a7a7a;
+  --accent-color: #c8c8c8;
+  --background-dark: #534949;
+  --background-light: #cfcfcf;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--primary-color);
+  cursor: url('./components/media/neu-cursor.png'), auto;
+}
+
+a {
+  cursor: url('./components/media/neu-cursor-clicked.png'), auto;
+}
+
+.container {
+  width: 100%;
+}
+
+h2 {
+  font-size: clamp(50px, 4.5vw, 84px);
+  padding-left: 42px;
+  margin-bottom: 0px;
+  color: var(--secondary-color);
+}
+
+h3{
+  font-size: clamp(40px, 3.5vw, 74px);
+  padding-top: 4vw;
+  padding-bottom: 5px;
+  margin: 5px;
+  text-align: center;
+  font-weight: 100;
+  color: #c8c8c8;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h4 {
+  font-size: clamp(20px, 1vw, 44px);
+  text-align: center;
+  color: #ababab;
+  margin: 6px;
+}
+
+
+
+.topbar {
+  background-color: #040404;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 20px;
+  left: 50%;
+  width: clamp(325px, 30vw, 500px);
+  height: clamp(60px, 9vw, 75px);
+  padding: 10px;
+  
+  border-radius: 24px;
+  text-align: center;
+
+  transform: translateX(-50%);
+  box-shadow: 0 0px 15px rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+
+.topbar a {
+  transition: transform 0.3s;
+  padding: clamp(15px,3vw, 20px);
+  font-weight: 50;
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(25px, 2.2vw, 50px);
+  color: #beb78b;
+  text-decoration: none;
+}
+
+.topbar a:hover {
+  color: #cabe6d;
+  transition: color 0.5s, transform 0.5s;
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+
+.myInfo {
+  font-size: clamp(35px, 2.5vw, 50px);
+  line-height: 150%;
+  font-family: "Dancing Script";
+  color: #868638;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.about {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 500; /* Medium weight for a sleek look */
+  color: #333; /* Adjust the color to match your design */
+  line-height: 1.6; /* Improve readability */
+}
+
+.myName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.info-photo-container {
+  height: 45vh;
+  width: 80vw;
+  margin: 100px auto;
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.myPic img {
+  height: 45vh;
+  justify-content: space-around;
+  border-radius: 50px;
+}
+
+
+.portfolio {
+  background-color: #86861e;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 3px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 3px);
+  background-size: 20px 20px; /* Adjust the size of the grid */
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.portfolio-item {
+  background: linear-gradient(
+    to right,
+    rgba(145, 145, 32, 0.3), /* Semi-transparent color */
+    rgba(199, 182, 113, 0.3) /* Semi-transparent color */
+  );
+  backdrop-filter: blur(10px); /* Blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glass effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 20px 0; 
+  text-align: center;
+  border-radius: 20px;
+}
+
+
+.portfolio-item-app {
+  margin: 10px;
+  text-align: center;
+}
+
+
+.portfolio-item-app img {
+  height: 45vh;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.portfolio-item-app img:hover {
+  transform: scale(1.05);
+  transition: color 0.5s, transform 0.5s;
+}
+
+.portfolio-item ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.portfolio-item li {
+  margin-bottom: 10px;
+}
+
+
+.lets-connect {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: clamp(20px, 1.5vw, 50px);
+  padding-left: 20px; 
+  color: #30300e;
+  background: linear-gradient(
+    to right,
+    rgba(145, 145, 32, 0.3), /* Semi-transparent color */
+    rgba(199, 182, 113, 0.3) /* Semi-transparent color */
+  );
+  backdrop-filter: blur(10px); /* Blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glass effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px;
+  text-align: left;
+  line-height: 120%;
+  margin: 10vw;
+  margin-bottom: 150px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.lets-connect a {
+  color: #8f8f22; 
+  text-decoration: none;
+}
+
+.lets-connect a:hover {
+  color: #b2b224; 
+  text-decoration: underline; 
+}
+
+
+footer {
+  color: aliceblue;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
+  background: #121212;
+}
+
+.philosophy {
+  font-size: clamp(30px, 3vw, 50px);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-family: "Dancing Script";
+  font-weight: 100;
+  color: #c8c8c8;
+}
+
+
+@media (max-width: 768px) {
+  .myInfo {
+    font-size: 24px; 
+  }
+
+  .about {
+    font-size: 28px; 
+  }
+
+  .info-photo-container {
+    flex-direction: column; 
+    width: 90vw;
+    height: auto;
+    margin-top: 25vw;
+    align-items: center;
+  }
+
+  .myPic img{
+    width: 50%;
+    height: auto; 
+    align-items: center;
+    
+  }
+
+  .portfolio-item-app img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+
+}
