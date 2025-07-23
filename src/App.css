@@ -118,36 +118,38 @@ h4 {
   z-index: 1;
 }
 
+.info-photo-container {
+  padding: 20px;
+  height: 45vh;
+  width: 100%;
+  margin: 250px auto 100px auto;
+  display: flex;
+  justify-content: center;  /* this is valid */
+  align-items: center;      /* vertical alignment */
+  gap: clamp(1rem, 5vw, 5rem);
+  flex-wrap: wrap;          /* handles narrow screens gracefully */
+}
+
 .myInfo {
   font-size: clamp(35px, 2.5vw, 50px);
   line-height: 150%;
   font-family: "Dancing Script";
-  color: #868638;
+  color: #9c9c01;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  flex: 1;
-  max-width: 40%;
+  flex: 2;
+  width: 60%;
+  max-width: 65%;
   font-size: clamp(24px, 2.5vw, 40px);
   line-height: 1.5;
 }
 
-.info-photo-container {
-  height: 45vh;
-  width: 100vw;
-  margin: 150px auto 100px auto;
-  display: flex;
-  justify-content: center;  /* this is valid */
-  align-items: center;      /* vertical alignment */
-  gap: 15rem;
-  flex-wrap: wrap;          /* handles narrow screens gracefully */
-}
-
 .about {
   font-family: 'Poppins', sans-serif;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 500;
-  color: #333;
+  color: #4ba8ff;
   line-height: 1.6;
 }
 
@@ -157,13 +159,22 @@ h4 {
 }
 
 
+.myPic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .myPic img {
-  height: 45vh;
-  max-width: 100%;
+  height: 50vh;
+  width: auto;             /* ✅ Maintain aspect ratio */
+  max-width: 400px;        /* ✅ Limit maximum width */
   border-radius: 25px;
   display: block;
 }
+
+
 
 
 
@@ -176,15 +187,17 @@ h4 {
   transition: transform 0.3s ease;
   padding: 20px;
   border-radius: 30px;
-  box-shadow: 4px -3px 20px rgba(128, 74, 0, 0.493);
+  box-shadow: 4px -3px 20px rgba(134, 82, 10, 0.623);
+  border: 0.5px solid rgba(255, 239, 239, 0.842);
+  
 }
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 1.5rem;
+  gap: 1.6rem;
   margin-top: 20px;
-  padding: 1rem;
+  padding: 1.6rem;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -202,19 +215,18 @@ h4 {
     rgba(199, 182, 113, 0.3)
   );
   backdrop-filter: blur(10px);
-  box-shadow: 0px 4px 6px rgba(129, 62, 0, 0.822);
-            
-              
-  
-  transition: transform 0.4s ease, border-radius 0.3s ease;;
+  box-shadow: 0px 4px 6px rgba(245, 159, 80, 0.822);
+  border: 5px solid rgba(255, 239, 239, 0.842);          
+  transition: transform 0.3s ease, border-radius 0.6s ease, box-shadow 0.4s ease;
   
 }
 
 .portfolio-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
   border-radius: 40px;
-  box-shadow: 2px 4px 6px rgba(129, 62, 0, 0.89), 
-              0px 0px 10px rgba(78, 64, 0, 0.822);
+  
+  box-shadow: -2px -4px 26px rgba(173, 106, 43, 0.527), 
+              2px 4px 20px rgba(113, 145, 61, 0.603);
 }
 
 .portfolio-card img {
@@ -232,11 +244,12 @@ h4 {
   width: 100%;
   text-align: center;
   transform: translateY(100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
 .portfolio-card:hover .overlay {
   transform: translateY(0px);
+  box-shadow: 0 -8px 10px rgba(224, 166, 59, 0.5);
 }
 
 .portfolio-card .text {
@@ -250,17 +263,17 @@ h4 {
 }
 
 .lets-connect {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(20px, 2vw, 40px);
-  color: #30300e;
+  color: #ad8500;
   background: linear-gradient(
     to right,
-    rgba(255, 255, 10, 0.39),
-    rgba(199, 182, 113, 0.3)
+    rgba(255, 234, 167, 0.39),
+    rgba(247, 255, 142, 0.445)
   );
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(223, 220, 47, 0.479), 0 1px 3px rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -269,39 +282,122 @@ h4 {
   line-height: 120%;
   margin: 10vw;
   margin-bottom: 150px;
-  border-radius: 20px;
+  border-radius: 45px;
   text-align: center;
+  border: 3px solid rgba(255, 255, 218, 0.842);
 }
 
 .lets-connect a {
-  color: #8f8f22; 
+  color: #9da800; 
   text-decoration: none;
+  font-weight: 100;
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(35px, 2.2vw, 50px);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .lets-connect a:hover {
-  color: #b2b224; 
-  text-decoration: underline; 
+  color: #627e00;
+  transform: scale(1.1);
+  text-shadow: 0px 10px 4px rgba(173, 128, 3, 0.6);
+  z-index: 1;
 }
 
-footer {
-  text-align: center;
-  margin-top: auto;
-  padding: 40px 40px 100px; 
-  background-color: #1a1a1a;
-  color: #f0f0f0;
-  font-family: 'Segoe UI', sans-serif;
+.footer {
   position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  padding-bottom: 150px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-text {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  padding: 60px 20px 40px;
+  font-family: 'Poppins', sans-serif;
+  color: #2a2a2a;
+}
+
+.footer-text .tagline {
+  font-size: clamp(18px, 2vw, 26px);
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.footer-text .punchline {
+  font-size: clamp(16px, 2vw, 22px);
+  color: #5d00a8;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.footer-text .signature {
+  font-size: clamp(14px, 1.6vw, 18px);
+  color: #888;
+  letter-spacing: 1px;
+}
+
+/* Rainbow animation background */
+.rainbow-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400%; /* Extra-wide for smooth horizontal movement */
+  height: 250px;
+  background: linear-gradient(
+    90deg,
+    #0047FF,
+    #00CFFF,
+    #00FFB7,
+    #FFF95B,
+    #FF6347,
+    #FF33A6,
+    #B620E0,
+    #0047FF, /* to create seamless loop */
+    #B620E0,
+    #FF33A6,
+    #FF6347,
+    #FFF95B,
+    #00FFB7,
+    #00CFFF,
+    #0047FF
+  );
+  background-size: 200% 100%; /* Enables repeating flow */
+  animation: rainbowFlow 10s linear infinite;
+  filter: blur(50px);
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes rainbowFlow {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 .philosophy {
   font-size: 1.1rem;
   font-style: italic;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .myName {
   font-size: 0.9rem;
   color: #aaa;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -368,8 +464,6 @@ footer {
 
 
 
-
-
 .background {
   position: fixed;
   inset: 0;
@@ -382,11 +476,11 @@ footer {
 .background::after {
   content: '';
   position: absolute;
-  width: 500px;
-  height: 500px;
-  filter: blur(120px);
+  width: 1000px;
+  height: 1000px;
+  filter: blur(220px);
   display: block;
-  opacity: 0.8;
+  opacity: 0.5;
   transform: translate(0, 0);     
   will-change: transform;
   background-repeat: no-repeat;
@@ -394,25 +488,25 @@ footer {
 }
 
 .background::before {
-  top: 20%;
-  left: 20%;
+  top: 5%;
+  left: 5%;
   background: radial-gradient(circle, #f50008, transparent 70%);
-  animation: float 4s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
 }
 
 .background::after {
-  top: 60%;
-  left: 60%;
+  top: 40%;
+  left: 70%;
   background: radial-gradient(circle, #e0dd03, transparent 70%);
-  animation: floatReverse 4s ease-in-out infinite;
+  animation: floatReverse 5s ease-in-out infinite;
 }
 
 @keyframes float {
   0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(120px, -100px); }
+  50% { transform: translate(80vw, -60vh); }
 }
 
 @keyframes floatReverse {
   0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-100px, 120px); }
+  50% { transform: translate(-40vw, -40vh); }
 }

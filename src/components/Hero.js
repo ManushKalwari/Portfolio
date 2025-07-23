@@ -11,16 +11,16 @@ function Hero() {
                     <p className="tagline">
                         <Typewriter
                             words={[
-                                'Crafting intelligence, one neural network at a time.',
-                                'Engineer curious about minds — biological and artificial.',
-                                'Building systems that learn, adapt, and solve.'
+                                'Artist, Engineer, Curious Mind.',
+                                'Loves reading biological & artificial minds.',
+
                             ]}
                             loop={0} // Set to 0 or Infinity
                             cursor
                             cursorStyle="|"
-                            typeSpeed={50}
-                            deleteSpeed={30}
-                            delaySpeed={2000}
+                            typeSpeed={100}
+                            deleteSpeed={20}
+                            delaySpeed={2500}
                         />
                     </p>
                 </div>

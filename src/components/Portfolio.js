@@ -70,7 +70,12 @@ const projects = [
 function Portfolio() {
     return (
         <section className="portfolio" id="portfolio">
-            <h2>Projects</h2>
+            <h2 style={{
+                letterSpacing: '16px',
+                textShadow: '2px -2px 6px rgba(104, 88, 18, 0.69)'
+            }}>
+                PRO Jects
+            </h2>
             <div className="portfolio-grid">
                 {projects.map((proj, index) => (
                     <div className="portfolio-card" key={index}>
