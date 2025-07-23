@@ -417,8 +417,8 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;             /* space between links */
-    padding: 12px 16px;
+    gap: 20px;             /* space between links */
+    padding: 12px 12px;
     width: 75vw;
     height: auto;
     flex-wrap: nowrap;     /* prevent wrapping */
@@ -426,26 +426,13 @@ h4 {
   }
 
   .topbar a {
-    font-size: 30px;
+    font-size: 25px;
     white-space: nowrap;
   }
 
-  .myInfo {
-    min-height: 260px;
-    padding: 10px;
-    font-size: clamp(20px, 4vw, 28px); 
-    width: 90%;
-    max-width: 90vw;
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  .about {
-    font-size: 28px; 
-  }
-
   .info-photo-container {
-    width: 100%;
+    width: 100vw;
+    height: 900px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -453,20 +440,42 @@ h4 {
     margin-top: 5vh; 
     padding: 10px 10px;
     gap: 20px;       
+    box-sizing: border-box;
+    overflow-x: hidden; 
   }
 
+
+  .myInfo {
+    padding: 0 10px;
+    font-size: clamp(20px, 4vw, 28px); 
+    width: 100%;
+    max-width: 90vw;
+    line-height: 1.5;
+    
+    text-align: center;
+  }
+
+  .about {
+    font-size: 28px; 
+  }
+
+
   .myPic {
-    width: 100%;              /* make sure it's full width */
+    width: 100%;
+    overflow: hidden;  
+    flex: none;  
     display: flex;
     justify-content: center;  /* horizontally center */
     align-items: center;
+    height: auto;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;     
   }
 
   .myPic img {
-    width: 50%;
-    height: auto;
+    width: 70vw;
+    max-width: 100%;    
     object-fit: contain;
     display: block;
     margin: 0 auto;
