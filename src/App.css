@@ -306,15 +306,21 @@ h4 {
   z-index: 1;
 }
 
+
+
 .footer {
   position: relative;
   background-color: #fff; 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 250px;
   overflow: hidden;
-  padding-bottom: 150px;
+  padding: 40px 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   border: 6px solid rgba(226, 233, 255, 0.521);
   box-shadow: 2px -15px 46px rgba(150, 142, 255, 0.61);
+  padding-bottom: 100px;
 }
 
 .footer-text {
@@ -352,7 +358,9 @@ h4 {
   bottom: 0;
   left: 0;
   width: 400%; /* Extra-wide for smooth horizontal movement */
-  height: 250px;
+  height: 100%;
+  min-height: 250px;
+  top: 0;
   background: linear-gradient(
     90deg,
     #0047FF,
@@ -404,20 +412,32 @@ h4 {
 }
 
 @media (max-width: 768px) {
+
   .topbar {
-    width: 70vw;              
-    height: 80px; 
-    padding: 10px;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;             /* space between links */
+    padding: 12px 16px;
+    width: 75vw;
+    height: auto;
+    flex-wrap: nowrap;     /* prevent wrapping */
+    overflow-x: auto;      /* allow scroll if squeezed */
   }
 
   .topbar a {
-    font-size: 28px;         /* scale down slightly */
-    white-space: nowrap;       /* prevent wrapping */
+    font-size: 30px;
+    white-space: nowrap;
   }
 
   .myInfo {
-    padding-top: 30px;
-    font-size: 28px; 
+    min-height: 260px;
+    padding: 10px;
+    font-size: clamp(20px, 4vw, 28px); 
+    width: 90%;
+    max-width: 90vw;
+    line-height: 1.5;
+    text-align: center;
   }
 
   .about {
@@ -425,17 +445,31 @@ h4 {
   }
 
   .info-photo-container {
-    flex-direction: column; 
-    width: 90vw;
-    height: auto;
-    margin-top: 25vw;
+    width: 100%;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 5vh; 
+    padding: 10px 10px;
+    gap: 20px;       
+  }
+
+  .myPic {
+    width: 100%;              /* make sure it's full width */
+    display: flex;
+    justify-content: center;  /* horizontally center */
+    align-items: center;
+    padding: 0;
+    margin: 0;
   }
 
   .myPic img {
     width: 50%;
-    height: auto; 
-    align-items: center;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
   }
 
   .portfolio-grid {
@@ -454,13 +488,15 @@ h4 {
   }
 
   .portfolio-card .text {
-  font-size: 1rem; 
+  font-size: 0.9rem; 
   }
 
-  .lets-connect {        
-    margin: 30px;  
-    padding: 10px;  
-    font-size: 20px;       
+  .lets-connect a {
+    margin: 20px 10px;
+    padding: 10px;
+    font-size: 3vw; /* responsive font */
+    word-break: break-word; /* breaks long email */
+    text-align: center;
   }
 
 }
