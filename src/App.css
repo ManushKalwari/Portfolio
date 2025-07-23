@@ -20,10 +20,12 @@ html,
 body {
   height: 100%;
   margin: 0;
-  padding:0;
-  min-height:100vh;
-  background-color: var(--primary-color);
+  padding: 0;
+  min-height: 100vh;
+  
   cursor: url('./components/media/neu-cursor.png'), auto;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -38,10 +40,10 @@ h2 {
   font-size: clamp(60px, 4.5vw, 84px);
   padding-bottom: 20px;
   text-align: center;
-  color: #c8c8c8;
+  color: #ffffff;
 }
 
-h3{
+h3 {
   font-size: clamp(40px, 3.5vw, 74px);
   padding-top: 4vw;
   padding-bottom: 5px;
@@ -59,47 +61,62 @@ h4 {
   margin: 6px;
 }
 
-
-
 .topbar {
-  background-color: rgba(1, 1, 1, 0.5);
   position: fixed;
-  display: flex;
-  justify-content: center;
   top: 20px;
   left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: clamp(400px, 30vw, 500px);
   height: clamp(80px, 9vw, 100px);
-  padding: 10px;
-  
-  border-radius: 30px;
-  text-align: center;
+  padding: 10px 20px;
 
-  transform: translateX(-50%);
-  box-shadow: 0 0px 15px rgba(10, 10, 10, 0.5);
-  backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
   z-index: 10;
+  animation: pulseBorder 6s ease-in-out infinite;
+}
+
+
+
+@keyframes pulseBorder {
+  0%, 100% { border-color: rgba(255, 255, 255, 0.2); }
+  50%      { border-color: rgba(255, 255, 255, 0.3); }
 }
 
 
 .topbar a {
-  transition: transform 0.3s;
-  padding: clamp(20px,3vw, 20px);
-  font-weight: 50;
+  padding: clamp(20px, 3vw, 20px);
+  font-weight: 500;
   font-family: "Dancing Script", cursive;
   font-size: clamp(35px, 2.2vw, 50px);
-  color: #dcd8bc;
+  color: rgb(70, 37, 0);
   text-decoration: none;
+  letter-spacing: 1px;
+  transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .topbar a:hover {
-  color: #ead449;
-  transition: color 0.5s, transform 0.5s;
-  transform: scale(1.2);
+  color: #130000;
+  transform: scale(1.1);
+  text-shadow: 0px 10px 4px rgba(77, 77, 77, 0.6);
   z-index: 1;
 }
-
 
 .myInfo {
   font-size: clamp(35px, 2.5vw, 50px);
@@ -109,15 +126,29 @@ h4 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  flex: 1;
+  max-width: 40%;
+  font-size: clamp(24px, 2.5vw, 40px);
+  line-height: 1.5;
 }
 
+.info-photo-container {
+  height: 45vh;
+  width: 100vw;
+  margin: 150px auto 100px auto;
+  display: flex;
+  justify-content: center;  /* this is valid */
+  align-items: center;      /* vertical alignment */
+  gap: 15rem;
+  flex-wrap: wrap;          /* handles narrow screens gracefully */
+}
 
 .about {
   font-family: 'Poppins', sans-serif;
   font-size: 28px;
-  font-weight: 500; /* Medium weight for a sleek look */
-  color: #333; /* Adjust the color to match your design */
-  line-height: 1.6; /* Improve readability */
+  font-weight: 500;
+  color: #333;
+  line-height: 1.6;
 }
 
 .myName {
@@ -125,76 +156,80 @@ h4 {
   font-size: 20px;
 }
 
-.info-photo-container {
-  height: 45vh;
-  width: 80vw;
-  margin: 100px auto;
-  margin-top: 150px;
-  display: flex;
-  justify-content: space-around;
-}
+
 
 .myPic img {
   height: 45vh;
-  justify-content: space-around;
-  border-radius: 50px;
+  max-width: 100%;
+  border-radius: 25px;
+  display: block;
 }
 
 
+
 .portfolio {
-  background-color: #301f40;
-  background-image: linear-gradient(rgba(212, 52, 52, 0.1) 1px, transparent 3px),
-                    linear-gradient(90deg, rgba(232, 115, 115, 0.1) 1px, transparent 3px);
-  background-size: 10px 10px; /* Adjust the size of the grid */
+  background-color: #5339007e;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.74) 0.6px, transparent 3px),
+                    linear-gradient(90deg, rgb(255, 255, 255, 0.74) 0.6px, transparent 3px);
+  background-size: 10px 10px;
   backdrop-filter: blur(20px);
   transition: transform 0.3s ease;
   padding: 20px;
   border-radius: 30px;
+  box-shadow: 4px -3px 20px rgba(128, 74, 0, 0.493);
 }
 
 .portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.5rem;
   margin-top: 20px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .portfolio-card {
   position: relative;
-  width: 360px;
-  height: 360px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 30px;
   overflow: hidden;
   background: linear-gradient(
     to right,
-    rgba(145, 145, 32, 0.3),
+    rgba(218, 218, 57, 0.3),
     rgba(199, 182, 113, 0.3)
   );
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(129, 62, 0, 0.822);
+            
+              
+  
+  transition: transform 0.4s ease, border-radius 0.3s ease;;
+  
 }
 
 .portfolio-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  border-radius: 40px;
+  box-shadow: 2px 4px 6px rgba(129, 62, 0, 0.89), 
+              0px 0px 10px rgba(78, 64, 0, 0.822);
 }
 
 .portfolio-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 30px;
   display: block;
 }
 
 .portfolio-card .overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(53, 66, 103, 0.7);
+  background: rgba(255, 161, 54, 0.685);
   color: #fff;
   width: 100%;
-  padding: 12px;
   text-align: center;
   transform: translateY(100%);
   transition: transform 0.3s ease;
@@ -207,30 +242,25 @@ h4 {
 .portfolio-card .text {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
-  line-height: normal;
   padding: 20px; 
-  
 }
 
 .portfolio-item * {
   box-sizing: border-box;
-  
 }
-
 
 .lets-connect {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: clamp(20px, 1.5vw, 50px);
-  padding-left: 20px; 
+  font-size: clamp(20px, 2vw, 40px);
   color: #30300e;
   background: linear-gradient(
     to right,
-    rgba(145, 145, 32, 0.3), /* Semi-transparent color */
-    rgba(199, 182, 113, 0.3) /* Semi-transparent color */
+    rgba(255, 255, 10, 0.39),
+    rgba(199, 182, 113, 0.3)
   );
-  backdrop-filter: blur(10px); /* Blur effect */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glass effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -253,7 +283,6 @@ h4 {
   text-decoration: underline; 
 }
 
-
 footer {
   text-align: center;
   margin-top: auto;
@@ -265,23 +294,31 @@ footer {
 }
 
 .philosophy {
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
 .myName {
-    font-size: 0.9rem;
-    color: #aaa;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
-
-
-
-
 @media (max-width: 768px) {
+  .topbar {
+    width: 70vw;              
+    height: 80px; 
+    padding: 10px;     
+  }
+
+  .topbar a {
+    font-size: 28px;         /* scale down slightly */
+    white-space: nowrap;       /* prevent wrapping */
+  }
+
   .myInfo {
-    font-size: 24px; 
+    padding-top: 30px;
+    font-size: 28px; 
   }
 
   .about {
@@ -296,18 +333,86 @@ footer {
     align-items: center;
   }
 
-  .myPic img{
+  .myPic img {
     width: 50%;
     height: auto; 
     align-items: center;
-    
   }
 
-  .portfolio-item-app img {
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s;
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 0.5rem;
   }
 
+  .portfolio-card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .portfolio-card img {
+    border-radius: 20px;
+  }
+
+  .portfolio-card .text {
+  font-size: 1rem; 
+  }
+
+  .lets-connect {        
+    margin: 30px;  
+    padding: 10px;  
+    font-size: 20px;       
+  }
+
+}
+
+
+
+
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: white;
+  overflow: hidden;
+}
+
+.background::before,
+.background::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  filter: blur(120px);
+  display: block;
+  opacity: 0.8;
+  transform: translate(0, 0);     
+  will-change: transform;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background::before {
+  top: 20%;
+  left: 20%;
+  background: radial-gradient(circle, #f50008, transparent 70%);
+  animation: float 4s ease-in-out infinite;
+}
+
+.background::after {
+  top: 60%;
+  left: 60%;
+  background: radial-gradient(circle, #e0dd03, transparent 70%);
+  animation: floatReverse 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(120px, -100px); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-100px, 120px); }
 }

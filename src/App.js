@@ -8,15 +8,21 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <main className="main">
-        <Hero />
-        <Portfolio />
-        <Connect />
-      </main>
-      <Footer />
-    </div>
+    <>
+      {/* Background blobs behind everything */}
+      <div className="background"></div>
+
+      {/* Your main content */}
+      <div className="container">
+        <Header />
+        <main className="main">
+          <Hero />
+          <Portfolio />
+          <Connect />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
 

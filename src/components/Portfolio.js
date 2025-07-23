@@ -14,7 +14,7 @@ const projects = [
         title: "Inference Optimization on DeepSeek & Phi",
         img: grpoThumbnail,
         link: "https://github.com/Infernaught/HPML_Final_Project",
-        desc: "Inference Optimization on DeepseekR1-7B using GRPO & SFT"
+        desc: "Inference Optimization on DeepseekR1-7B using GRPO & SFTnow that now "
     },
     {
         title: "EEG-to-Text Translation",
