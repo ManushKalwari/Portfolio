@@ -422,12 +422,12 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;             /* space between links */
+    gap: 12px;             
     padding: 12px 12px;
-    width: 75vw;
+    width: 80vw;
     height: auto;
-    flex-wrap: nowrap;     /* prevent wrapping */
-    overflow-x: auto;      /* allow scroll if squeezed */
+    flex-wrap: wrap;     
+    overflow-x: hidden;      
   }
 
   .topbar a {
