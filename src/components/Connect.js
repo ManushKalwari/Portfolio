@@ -30,7 +30,7 @@ function Connect() {
                 {/* Always-visible email */}
                 <p style={{ textAlign: 'center' }}>
                     <a href="mailto:manushkalwari141@gmail.com" className="email-link">
-                        Reach me at → manushkalwari141@gmail.com
+                        Reach me @manushkalwari141@gmail.com
                     </a>
                 </p>
             </div>

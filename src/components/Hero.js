@@ -6,7 +6,7 @@ function Hero() {
     return (
         <div className="info-photo-container" id="home">
             <div className="myInfo">
-                <div className="name">Hi, I’m Manush Kalwari</div>
+                <div className="name">Hello,<br />I’m Manush Kalwari</div>
                 <div className="about">
                     <p className="tagline">
                         <Typewriter

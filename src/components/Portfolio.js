@@ -14,37 +14,37 @@ const projects = [
         title: "Inference Optimization on DeepSeek & Phi",
         img: grpoThumbnail,
         link: "https://github.com/Infernaught/HPML_Final_Project",
-        desc: "Inference Optimization on DeepseekR1-7B using GRPO & SFTnow that now "
+        desc: "Inference Optimization on DeepseekR1-7B"
     },
     {
         title: "EEG-to-Text Translation",
         img: eegThumbnail,
         link: "https://github.com/ManushKalwari/BCI_eeg-text",
-        desc: "Decoded raw EEG into coherent text using CLIP-BART fusion"
+        desc: "EEG-to-text using CLIP-BART fusion"
     },
     {
         title: "Unsupervised Image Classification",
         img: jepaThumbnail,
         link: "https://github.com/ManushKalwari/JEPA-Project",
-        desc: "Image classification without labels using Joint-Embedding Pretrained Architecture (JEPA)"
+        desc: "Unsupervised Image classification"
     },
     {
         title: "Aneurysm Detection in Brain",
         img: aneurysmThumbnail,
         link: "https://github.com/ecbme6040/e6691_2025spring_Project_ABAD_kb3343_mmk2266",
-        desc: "3D U-Net pipeline for TOF-MRA scans with anatomical priors"
+        desc: "Aneurysm Detection in Brain using 3D U-Net"
     },
     {
         title: "Transmission Line Faults Detection",
         img: transmissionThumbnail,
         link: "https://www.semanticscholar.org/paper/An-Error-Tracking-Approach-for-Transmission-Lines-Kalwari-Nirmal/89644c092dddff4a85ff286fd131bc6db14e26d4",
-        desc: "RESEARCH - Efficient Classification of overhead transmission line Faults"
+        desc: "RESEARCH - Classification of overhead transmission line Faults"
     },
     {
         title: "CountingCals",
         img: countingcalThumbnail,
         link: "https://github.com/ManushKalwari/CountingCals",
-        desc: "Estimate food calories from multi-angle photos"
+        desc: "Estimating food calories from photos"
     },
     {
         title: "Custom LZW Compression",
@@ -62,7 +62,7 @@ const projects = [
         title: "Svara Shodh",
         img: swaraThumbnail,
         link: "https://github.com/ManushKalwari/Svara-Shodh",
-        desc: "Extract musical notes from songs using spectral processing"
+        desc: "Extract musical notes from songs (spectral processing)"
     }
 ];
 
