@@ -12,7 +12,7 @@ function Hero() {
                         <Typewriter
                             words={[
                                 'Artist, Engineer, Curious Mind.',
-                                'Loves reading biological & artificial minds.',
+                                'Loves reading Artificial & Biological minds.',
 
                             ]}
                             loop={0} //Infinite looop
