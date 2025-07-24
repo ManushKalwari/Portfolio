@@ -15,7 +15,7 @@ function Hero() {
                                 'Loves reading biological & artificial minds.',
 
                             ]}
-                            loop={0} // Set to 0 or Infinity
+                            loop={0} //Infinite looop
                             cursor
                             cursorStyle="|"
                             typeSpeed={100}

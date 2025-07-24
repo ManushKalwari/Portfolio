@@ -100,7 +100,7 @@ h4 {
 
 
 .topbar a {
-  padding: clamp(20px, 3vw, 20px);
+  padding: clamp(15px, 3vw, 20px);
   font-weight: 500;
   font-family: "Dancing Script", cursive;
   font-size: clamp(35px, 2.2vw, 50px);
@@ -141,15 +141,17 @@ h4 {
   flex: 2;
   width: 60%;
   max-width: 65%;
-  font-size: clamp(24px, 2.5vw, 40px);
+  font-size: clamp(30px, 2.5vw, 40px);
   line-height: 1.5;
+  letter-spacing: 2px;
 }
 
 .about {
   font-family: 'Poppins', sans-serif;
   font-size: 38px;
-  font-weight: 500;
-  color: #4ba8ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffad42;
   line-height: 1.6;
 }
 
@@ -157,7 +159,6 @@ h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
 }
-
 
 .myPic {
   flex: 1;
@@ -268,7 +269,7 @@ h4 {
   color: #ad8500;
   background: linear-gradient(
     to right,
-    rgba(255, 234, 167, 0.39),
+    rgba(255, 246, 215, 0.39),
     rgba(247, 255, 142, 0.445)
   );
   backdrop-filter: blur(10px);
@@ -277,9 +278,8 @@ h4 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 30px;
-  text-align: left;
-  line-height: 120%;
+  padding: 20px;
+  line-height: 100%;
   margin: 10vw;
   margin-bottom: 150px;
   border-radius: 45px;
@@ -416,6 +416,8 @@ h4 {
   z-index: 1;
 }
 
+
+
 @media (max-width: 768px) {
 
   .topbar {
@@ -423,7 +425,7 @@ h4 {
     justify-content: center;
     align-items: center;
     gap: 12px;             
-    padding: 12px 12px;
+    padding: 5px 5px;
     width: 80vw;
     height: auto;
     flex-wrap: wrap;     
@@ -431,6 +433,7 @@ h4 {
   }
 
   .topbar a {
+    padding: 10px;
     font-size: 20px;
     white-space: nowrap;
   }

@@ -15,22 +15,22 @@ function Connect() {
                 >
                     <Typewriter
                         words={[
-                            'Thanks for wandering through this little corner of the web.',
-                            'I don’t do farewells. Let’s keep the conversation going...',
+                            'Thanks for wandering through this little Corner of the Web.',
+                            'I don’t do farewells. Let’s keep the Conversation going >>>',
                         ]}
                         loop={0}
                         cursor
                         cursorStyle="❀"
-                        typeSpeed={50}
-                        deleteSpeed={30}
-                        delaySpeed={2000}
+                        typeSpeed={80}
+                        deleteSpeed={20}
+                        delaySpeed={2500}
                     />
                 </p>
 
                 {/* Always-visible email */}
                 <p style={{ textAlign: 'center' }}>
                     <a href="mailto:manushkalwari141@gmail.com" className="email-link">
-                        Reach me @manushkalwari141@gmail.com
+                        manushkalwari141@gmail.com
                     </a>
                 </p>
             </div>

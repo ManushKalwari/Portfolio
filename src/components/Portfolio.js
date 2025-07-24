@@ -74,7 +74,7 @@ function Portfolio() {
                 letterSpacing: '16px',
                 textShadow: '2px -2px 6px rgba(104, 88, 18, 0.69)'
             }}>
-                PRO Jects
+                PRO jets
             </h2>
             <div className="portfolio-grid">
                 {projects.map((proj, index) => (

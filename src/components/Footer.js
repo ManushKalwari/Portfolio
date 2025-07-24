@@ -9,7 +9,7 @@ function Footer() {
 
                 <p className="signature">© 2025 | Manush M. Kalwari</p>
             </div>
-            <div className="rainbow-bg"></div> {/* Already styled before */}
+            <div className="rainbow-bg"></div>
         </footer>
     );
 }
