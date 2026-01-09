@@ -71,7 +71,7 @@ h4 {
   justify-content: center;
   align-items: center;
 
-  width: clamp(400px, 30vw, 500px);
+  width: clamp(800px, 30vw, 500px);
   height: clamp(80px, 9vw, 100px);
   padding: 10px 20px;
 
@@ -80,7 +80,7 @@ h4 {
     rgba(255, 255, 255, 0.15),
     rgba(255, 255, 255, 0.05)
   );
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 4px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
 
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
@@ -169,8 +169,8 @@ h4 {
 
 .myPic img {
   height: 50vh;
-  width: auto;             /* ✅ Maintain aspect ratio */
-  max-width: 400px;        /* ✅ Limit maximum width */
+  width: auto;             
+  max-width: 400px;       
   border-radius: 25px;
   display: block;
 }
@@ -180,25 +180,24 @@ h4 {
 
 
 .portfolio {
-  background-color: #5339007e;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.74) 0.6px, transparent 3px),
-                    linear-gradient(90deg, rgb(255, 255, 255, 0.74) 0.6px, transparent 3px);
+  background-color: #cb740ab9;
+  background-image: linear-gradient(rgba(229, 219, 191, 0.368) 4px, transparent 1px),
+                    linear-gradient(90deg, rgba(229, 219, 191, 0.396) 4px, transparent 1px);
   background-size: 10px 10px;
   backdrop-filter: blur(20px);
   transition: transform 0.3s ease;
   padding: 20px;
   border-radius: 30px;
   box-shadow: 4px -3px 20px rgba(134, 82, 10, 0.623);
-  border: 0.5px solid rgba(255, 239, 239, 0.842);
+  border: 5px solid rgba(255, 241, 223, 0.842);
   padding-bottom: 60px;
 }
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 1.6rem;
-  margin-top: 20px;
-  padding: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -210,24 +209,17 @@ h4 {
   aspect-ratio: 1 / 1;
   border-radius: 30px;
   overflow: hidden;
-  background: linear-gradient(
-    to right,
-    rgba(218, 218, 57, 0.3),
-    rgba(199, 182, 113, 0.3)
-  );
-  backdrop-filter: blur(10px);
-  box-shadow: 0px 4px 6px rgba(245, 159, 80, 0.822);
-  border: 5px solid rgba(255, 239, 239, 0.842);          
+  box-shadow: 0px 5px 6px rgba(146, 73, 5, 0.79);
+  border: 4px solid rgba(116, 70, 128, 0.842);          
   transition: transform 0.3s ease, border-radius 0.6s ease, box-shadow 0.4s ease;
   
 }
 
 .portfolio-card:hover {
   transform: scale(1.02);
-  border-radius: 40px;
-  
-  box-shadow: -2px -4px 26px rgba(173, 106, 43, 0.527), 
-              2px 4px 20px rgba(113, 145, 61, 0.603);
+  border-radius: 35px;
+  box-shadow: -2px -4px 16px rgba(114, 56, 2, 0.612), 
+              2px 4px 20px rgba(129, 85, 14, 0.664);
 }
 
 .portfolio-card img {
@@ -429,7 +421,8 @@ h4 {
     width: 80vw;
     height: auto;
     flex-wrap: wrap;     
-    overflow-x: hidden;      
+    overflow-x: hidden;  
+    border-radius: 20px;    
   }
 
   .topbar a {
