@@ -1,9 +1,6 @@
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Portfolio from './components/Portfolio';
-import Connect from './components/Connect';
-import Footer from './components/Footer';
+import Header from "./components/Header/Header";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Footer from "./components/Footer/Footer";
 import './App.css';
 
 function App() {
@@ -16,9 +13,7 @@ function App() {
       <div className="container">
         <Header />
         <main className="main">
-          <Hero />
           <Portfolio />
-          <Connect />
         </main>
         <Footer />
       </div>

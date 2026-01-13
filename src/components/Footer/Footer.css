@@ -1,0 +1,93 @@
+/* ---------------- Footer Container ---------------- */
+
+.footer {
+  position: relative;
+  background: #ffffff;
+  border-radius: 30px;
+  border: 6px solid rgba(226, 233, 255, 0.52);
+  box-shadow: 2px -15px 46px rgba(150, 142, 255, 0.61);
+  padding: 80px 20px 120px;
+  overflow: hidden;
+}
+
+
+
+/* ---------------- Footer Text ---------------- */
+
+.footer-text {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+}
+
+.punchline {
+  font-size: clamp(16px, 2vw, 22px);
+  color: #f8dfff;
+  margin-bottom: 16px;
+}
+
+.tagline {
+  font-size: clamp(18px, 2vw, 26px);
+  font-style: italic;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 20px;
+  animation: colorPulse 3s ease-in-out infinite;
+}
+
+.signature {
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: #f8acff;
+  letter-spacing: 1px;
+}
+
+/* ---------------- Background Effect ---------------- */
+
+.rainbow-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #0047ff,
+    #ff6347,
+    #ff33a6,
+    #b620e0,
+    #0047ff
+  );
+  background-size: 200% 100%;
+  animation: rainbowFlow 10s linear infinite;
+  filter: blur(50px);
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------------- Animations ---------------- */
+
+@keyframes rainbowFlow {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes colorPulse {
+  0%,
+  100% {
+    color: #444;
+  }
+  50% {
+    color: #888;
+  }
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 768px) {
+  .connect {
+    margin: 40px 16px;
+  }
+}

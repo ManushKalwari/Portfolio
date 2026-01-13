@@ -1,0 +1,188 @@
+.carousel-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.section-title {
+  letter-spacing: 5px;
+  text-shadow: 2px -2px 6px rgba(77, 65, 9, 1);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-card {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-image {
+  height: 360px;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-content {
+  padding: 18px;
+}
+
+.carousel-content h3 {
+  margin-bottom: 8px;
+}
+
+.carousel-content .desc {
+  opacity: 0.95;
+}
+
+.carousel-content .sub {
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+.github-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+}
+
+.nav-btn.left {
+  left: -10px;
+}
+
+.nav-btn.right {
+  right: -10px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.dot.active {
+  width: 24px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+
+/*---------------------------------------------------------------*/
+
+
+.portfolio {
+  background-color: #cb740ab9;
+  background-image: linear-gradient(rgba(229, 219, 191, 0.368) 4px, transparent 1px),
+                    linear-gradient(90deg, rgba(229, 219, 191, 0.396) 4px, transparent 1px);
+  background-size: 10px 10px;
+  backdrop-filter: blur(20px);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 4px -3px 20px rgba(134, 82, 10, 0.623);
+  border: 5px solid rgba(255, 255, 255, 0.842);
+  padding-bottom: 60px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.portfolio-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 5px 6px rgba(146, 73, 5, 0.79);
+  border: 4px solid rgba(116, 70, 128, 0.842);          
+  transition: transform 0.3s ease, border-radius 0.6s ease, box-shadow 0.4s ease;
+  
+}
+
+.portfolio-card:hover {
+  transform: scale(1.02);
+  border-radius: 35px;
+  box-shadow: -2px -4px 16px rgba(114, 56, 2, 0.612), 
+              2px 4px 20px rgba(129, 85, 14, 0.664);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-card .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 161, 54, 0.685);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.6s ease;
+}
+
+.portfolio-card:hover .overlay {
+  transform: translateY(0px);
+  box-shadow: 0 -8px 10px rgba(224, 166, 59, 0.5);
+}
+
+.portfolio-card .text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  padding: 20px; 
+}
+
+.portfolio-item * {
+  box-sizing: border-box;
+}
