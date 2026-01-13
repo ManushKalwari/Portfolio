@@ -1,25 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.80b150ba.css",
-    "main.js": "/Portfolio/static/js/main.96350fd6.js",
+    "main.css": "/Portfolio/static/css/main.e0f5884a.css",
+    "main.js": "/Portfolio/static/js/main.8b4a6837.js",
     "static/js/488.f9972b8f.chunk.js": "/Portfolio/static/js/488.f9972b8f.chunk.js",
-    "static/media/lzwThumbnail.png": "/Portfolio/static/media/lzwThumbnail.8243bd9960a180a81bc3.png",
-    "static/media/transmissionThumbnail.png": "/Portfolio/static/media/transmissionThumbnail.0c8326d80e8fda81ba38.png",
     "static/media/jepaThumbnail.png": "/Portfolio/static/media/jepaThumbnail.c69749fbc319e39bd551.png",
     "static/media/countingcalThumbnail.png": "/Portfolio/static/media/countingcalThumbnail.bbdf58f645574d21e680.png",
-    "static/media/expenseThumbnail.png": "/Portfolio/static/media/expenseThumbnail.0e570354a4cdbefa0dd4.png",
-    "static/media/swaraThumbnail.png": "/Portfolio/static/media/swaraThumbnail.025353337186eaa75d63.png",
     "static/media/aneurysmThumbnail.png": "/Portfolio/static/media/aneurysmThumbnail.6d2a58a726cff7230b99.png",
     "static/media/grpoThumbnail.png": "/Portfolio/static/media/grpoThumbnail.e7e9ddee603b2484f328.png",
     "static/media/eegThumbnail.png": "/Portfolio/static/media/eegThumbnail.907125e13cae50b6f4be.png",
     "static/media/myPic.png": "/Portfolio/static/media/myPic.1b5c0d4e6fd47df119f3.png",
     "index.html": "/Portfolio/index.html",
-    "main.80b150ba.css.map": "/Portfolio/static/css/main.80b150ba.css.map",
-    "main.96350fd6.js.map": "/Portfolio/static/js/main.96350fd6.js.map",
+    "main.e0f5884a.css.map": "/Portfolio/static/css/main.e0f5884a.css.map",
+    "main.8b4a6837.js.map": "/Portfolio/static/js/main.8b4a6837.js.map",
     "488.f9972b8f.chunk.js.map": "/Portfolio/static/js/488.f9972b8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80b150ba.css",
-    "static/js/main.96350fd6.js"
+    "static/css/main.e0f5884a.css",
+    "static/js/main.8b4a6837.js"
   ]
 }
